@@ -1,46 +1,148 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
+@theme {
+  --color-abyss: #0a0e14;
+  --color-navy: #101826;
+  --color-steel: #1b2838;
+  --color-gold: #c99a4e;
+  --color-gold-deep: #9a6e3b;
+  --color-champagne: #e5c27d;
+  --color-cream: #f5f2ea;
+  --color-cream-200: #ece7d9;
+  --color-muted: #5c6573;
+  --color-haze: #93a1b3;
+
+  /* Variante /light (stile editoriale, warm light mode) */
+  --color-paper: #f3f1ea;
+  --color-paper-200: #ece8dd;
+  --color-ink: #15191f;
+  --color-ink-soft: #565f6b;
+  --color-sand: #e7e0d2;
+  --color-clay: #d8ccb6;
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-hanken);
+  --font-grotesk: var(--font-general);
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --nav-h: 5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --animate-marquee: marquee var(--duration) infinite linear;
-  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
-    }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-    }
-  }
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-    }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
-    }
-  }
+/* Variante /light: scala fluida su schermi grandi (effetto "zoom" come Ally).
+   Tutto è in rem → container, font, spaziature e altezze crescono insieme.
+   Sotto ~1536px resta 16px (laptop invariati); sui monitor larghi sale fino a 22px. */
+html:has(.light-root) {
+  font-size: clamp(16px, 1.05vw, 22px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  border-color: color-mix(in srgb, var(--color-navy) 12%, transparent);
+}
+
+html {
+  scroll-padding-top: calc(var(--nav-h) + 1rem);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-navy);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "kern", "liga", "calt";
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-abyss);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Eyebrow / readout corporate */
+@utility readout {
+  font-family: var(--font-sans), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Ritmo verticale generoso (anti-SaaS) */
+@utility section-y {
+  padding-block: clamp(5rem, 10vw, 10rem);
+}
+
+@utility hairline-gold {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-gold) 70%, transparent),
+    transparent
+  );
+}
+
+@utility frame-gold {
+  border: 1px solid color-mix(in srgb, var(--color-gold) 26%, transparent);
+}
+
+/* Sottolineatura oro "manifesto" (stile editoriale /light) */
+@utility mark-gold {
+  background-image: linear-gradient(var(--color-gold), var(--color-gold));
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.16em;
+  padding-bottom: 0.02em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Display grotesk strettissimo (stile Ally) */
+@utility display-tight {
+  font-family: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+
+/* Grana atmosferica per profondità premium */
+@utility grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

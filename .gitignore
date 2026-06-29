@@ -39,3 +39,29 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# playwright mcp (screenshot loop)
+/.playwright-mcp/
+
+# artefatti di sviluppo locale
+.dev-server.log
+
+# documenti privati del cliente — NON pubblicare (repo pubblico + sito live)
+/public/Esito_evasione_protocollo.pdf
+/public/Mockup GPT/
+
+# immagini sorgente non usate (sostituite dalle versioni .webp ottimizzate)
+/public/giorgos-barazoglou-fthjdJetIMQ-unsplash.jpg
+/public/natalya-letunova-983kNF8aZEc-unsplash.jpg
+/public/hero-test.png
+/public/icon 1.png
+/public/icon 2.png
+/public/icon 3.png
+/public/icon 4.png
+/public/icon 5.png
+/public/Logo Fortun.png
+/public/Approvvigionamento.png
+/public/Consegna.png
+/public/QC.png
+/public/Stoccaggio.png
+/public/Trasporto.png

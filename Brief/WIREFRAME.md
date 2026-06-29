@@ -1,49 +1,36 @@
 # WIREFRAME.md — Fortun SRL
 
-> Ordine sezioni testuale per la home `/`. La versione `/en` è lo specchio identico.
-> Layout + contenuto ad alto livello + animazione minima. Nessun copy reale qui (vive in COPY.md, Chat 2).
-> Archetipo: **C scroll-driven 70% / B cinematico 30%**.
+> **Aggiornato v3 (26 giugno 2026)** alla direzione corporate-luxury dei mockup GPT approvati dal titolare + teardown di 7 siti oil&gas (Mercuria, TotalEnergies, Repsol, SLCT, BB Energy, Danske, Javelin).
+> Home single-page bilingue (`/` IT, `/en` EN specchio). Sezioni = ancore interne. Sfondi fotografici reali in `public/bg/*.webp`.
+> Font: **Fraunces** (serif display) + **Hanken Grotesk** (body). Smooth scroll **Lenis** + animazioni **Motion**.
 
 ## Home `/`
 
-### 1. Hero — *(archetipo B, cinematico)*
-- **Layout:** full-bleed scuro. Nav fissa in alto: wordmark Fortun a sinistra · toggle IT/EN + CTA singolo a destra. Wordmark monumentale FORTUN sovrapposto in basso + una riga di posizionamento.
-- **Contiene:** immagine/loop atmosferico (terminale petrolifero notturno / cisterna ormeggiata, luce calda su blu-nero), wordmark display, headline di posizionamento, 1 CTA ("Contatta il team" / "Request supply").
-- **Animazione:** parallax leggero sull'immagine, wordmark in fade-in. Loop video lento oppure still pesante (no movimento concitato).
+### 1. Hero — *(sfondo `bg/hero.webp`: goccia oro + raffineria notturna)*
+- Full-bleed scuro, overlay navy a sinistra per leggibilità. Nav corporate fissa (Chi siamo · Mercati · Come operiamo · Soluzioni · Compliance · Contatti + toggle IT/EN + CTA oro "Richiedi una quotazione").
+- Headline **serif** con parola-chiave in **oro corsivo**, sub fattuale, 2 CTA (oro pieno + outline), 4 feature-pill con icona oro.
+- Animazione: reveal staggered; parallax soft opzionale.
 
-### 2. Posizionamento — *(inizio scroll C)*
-- **Layout:** base chiara, composizione editoriale asimmetrica. Niente card.
-- **Contiene:** eyebrow breve (trading internazionale · Oil & Gas), paragrafo forte su chi è Fortun (società italiana, sede Roma, rete globale di partner/fornitori), affiancato da 2–3 numeri-ancora (es. n° prodotti trattati, n° hub operativi, copertura).
-- **Animazione:** reveal on scroll, conteggio progressivo dei numeri.
+### 2. Chi siamo + KPI — *(sfondo `bg/about.webp`: cream + night-earth)*
+- Base chiara. Sinistra: eyebrow + headline serif + body + 3 feature (icona oro + titolo + testo). Destra: **card scura** (night-earth) con 3 dati qualitativi.
+- Sotto: **fascia KPI** a 4 numeri serif oro con **count-up on-scroll**. ⚠️ Solo metriche reali/qualitative (Anno 2022 · 3 hub · 5 prodotti · 3 continenti). **Mai numeri inventati.**
 
-### 3. Hub operativi — *(cuore della pagina)*
-- **Layout:** sezione scura full-bleed.
-- **Contiene:** i tre TSA — **Rotterdam · Houston · Fujairah** — su mappa essenziale e sobria con i tre punti marcati (NO rete-globo coi puntini luminosi). Per ogni hub: nome, macro-area (ARA / US Gulf / Middle East), una riga sul ruolo operativo. È la prova fisica che Fortun esiste e opera davvero.
-- **Animazione:** i tre hub si illuminano/rivelano in sequenza durante lo scroll, sticky leggero della mappa.
+### 3. Mercati & Network — *(sfondo `bg/network.webp`: mappa mondiale + rotte)*
+- Scuro full-bleed. Headline "Mercati e *Network*", body, 3 bullet, CTA outline, legenda (Hub logistici · Terminal & Port · Rotte commerciali) + chip dei 3 hub reali. La mappa con rotte è nello sfondo (ex-banlist, ora approvata dal cliente).
 
-### 4. Prodotti
-- **Layout:** base chiara, lista editoriale (NO griglia 2×2).
-- **Contiene:** i 5 prodotti raffinati — **Diesel EN590, Jet Fuel A1, LPG, Fuel Oil, Crude Oil** — ognuno con la sigla/specifica reale. Le specifiche tecniche qui sono parte della credibilità.
-- **Animazione:** righe che si rivelano una alla volta, dettaglio/spec in hover.
+### 4. Come operiamo — *(sfondo `bg/process.webp`: serbatoi notturni)*
+- Scuro. Headline "Un processo integrato. *Valore in ogni passaggio*". **Processo 5 step** (Approvvigionamento · Stoccaggio · Trasporto · Controllo qualità · Consegna) con icone a linea oro, numeri 01–05 serif e **linea oro che si "disegna" allo scroll**. Barra-nota finale.
 
-### 5. Trading & Supply
-- **Layout:** asimmetrico narrativo, colonna testo che avanza.
-- **Contiene:** i 5 servizi — trading internazionale di commodities, ricerca e approvvigionamento globale, coordinamento delle forniture, facilitazione commerciale, operazioni sui mercati internazionali.
-- **Animazione:** scroll-driven, testo che scorre su colonna/elemento fisso.
+### 5. Soluzioni — *(sfondo `bg/solutions.webp`: montaggio industriale)*
+- Scuro. Headline "Soluzioni energetiche. *Valore reale*". **Prodotti** (grid card con icona oro + spec + descrizione, hover zoom) — i 5 reali (Diesel EN590, Jet Fuel A1, GPL, Fuel Oil, Crude Oil). **Servizi** (4 card: Stoccaggio&logistica, Shipping&trasporto, Coordinamento forniture, Supply solutions).
 
-### 6. Come operiamo
-- **Layout:** sobrio, sequenziale. Niente icone-cliché.
-- **Contiene:** i 4 pilastri razionali — Operatività affidabile · Presenza globale · Approccio compliance-oriented · Relazioni strategiche. È la sezione che scioglie la diffidenza del buyer.
-- **Animazione:** reveal sequenziale dei 4 pilastri.
+### 6. Compliance — *(sfondo `bg/compliance.webp`: cream + mappa tenue)*
+- Base chiara. Headline "Compliance & *Affidabilità*", body, **4 card** hairline con icona oro (Controparti qualificate · Documentazione e compliance · Controllo qualità · Market intelligence & risk) + citazione valori.
 
-> **[OPZIONALE — solo se loghi reali e autorizzati]** Riga "Partner / Controparti" tra la 6 e la 7. Da inserire ESCLUSIVAMENTE con loghi reali forniti dal cliente. Loghi finti in questo settore distruggono la credibilità: in assenza, omettere del tutto.
+### 7. Contatti — *(sfondo `bg/contact.webp`: skyline raffineria notturna)*
+- Scuro. Headline "Richiedi una quotazione *o raccontaci le tue esigenze*". Sinistra: microcopy + 3 rassicurazioni + dati operativi reali (sede Roma, email, PEC, telefono [DA CONFERMARE]). Destra: **form di quotazione** (Nome · Azienda · Email · Prodotto · Volumi · Incoterm · Porto · Note + consenso GDPR) → `/grazie`.
 
-### 7. Contatti — *(momento di conversione)*
-- **Layout:** sezione scura. Due colonne: form a sinistra, dati reali a destra.
-- **Contiene:** form strutturato (lead qualification, NON mailto secco) — campi: Nome · Azienda · Email · Tipo di richiesta · Messaggio. A fianco: **Via Aldo Sandulli 91, Roma, Italia** · info@fortunsrl.com. Submit → `/grazie` (`/en/thank-you`).
-- **Animazione:** minima, focus stati campo puliti.
+### 8. Footer
+- Scuro full-bleed: tagline, colonne (Sezioni · Contatti · Dati aziendali con P.IVA/REA/EORI/PEC), toggle lingua, link legali, **wordmark FORTUN monumentale**.
 
-### 8. Chiusura + Footer
-- **Layout:** full-bleed scuro.
-- **Contiene:** wordmark monumentale FORTUN ripetuto, dati aziendali completi (ragione sociale SRL, sede, P.IVA), email, toggle lingua, link legali (privacy / cookie).
-- **Animazione:** wordmark in reveal all'ingresso del footer.
+> NOTE: i 7 prodotti del mockup GPT (con Benzina/Bitume/Biofuel) NON corrispondono ai 5 reali del brief → usati i 5 reali. "Sostenibilità" e "News" del mega-mockup sono pagine future opzionali, non incluse nella v3.

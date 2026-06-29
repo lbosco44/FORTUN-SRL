@@ -53,3 +53,7 @@
 - IT su `/`, EN su `/en` — entrambe indicizzate.
 - `hreflang="it"` e `hreflang="en"` reciproci su ogni coppia + `x-default` su `/en` (pubblico prevalentemente internazionale).
 - Il toggle lingua è elemento permanente di nav e footer.
+
+## Aggiornamento v3 (26 giugno 2026)
+- Resta **single-page** (`/` + `/en`) + legali + conferma. La nav corporate espone 6 ancore: **Chi siamo** (`#chi-siamo`) · **Mercati** (`#mercati`) · **Come operiamo** (`#come-operiamo`) · **Soluzioni** (`#soluzioni`) · **Compliance** (`#compliance`) · **Contatti** (`#contatti`), più CTA "Richiedi una quotazione".
+- Pagine future opzionali (dal mega-mockup, non incluse ora): **Sostenibilità**, **News** — diventerebbero route reali (`/sostenibilita`, `/news`) con relative `/en/*` se il cliente le vuole.
