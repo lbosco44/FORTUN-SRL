@@ -113,8 +113,8 @@ const it: Content = {
   },
   hero: {
     eyebrow: "Trading house · Oil & Gas · Roma",
-    headLead: "Portiamo prodotti petroliferi raffinati",
-    headAccent: "ai mercati di tutto il mondo.",
+    headLead: "Trading e supply di prodotti petroliferi raffinati",
+    headAccent: "per mercati in continua evoluzione.",
     sub: "Società italiana di trading fisico: acquistiamo, vendiamo e coordiniamo forniture di prodotti raffinati tra produttori, raffinerie e operatori industriali, con una rete di partner su tre continenti.",
     ctaPrimary: "Richiedi una quotazione",
     ctaSecondary: "Scopri come operiamo",
@@ -122,8 +122,8 @@ const it: Content = {
   },
   about: {
     eyebrow: "Chi siamo",
-    headLead: "Un partner affidabile nel",
-    headAccent: "trading fisico di prodotti petroliferi.",
+    headLead: "Una società di trading italiana, con una rete di fornitori e controparti",
+    headAccent: "mondiale.",
     body: "Fortun SRL è una società italiana con sede a Roma. Operiamo nel trading di prodotti petroliferi raffinati: non estraiamo e non raffiniamo, muoviamo prodotto già a specifica dai mercati dove viene immesso a quelli dove serve. Il nostro lavoro è sapere dove c'è disponibilità, dove c'è domanda, e gestire con rigore tutto ciò che sta in mezzo.",
     features: [
       { title: "Affidabilità e trasparenza", desc: "Termini chiari prima di impegnarci, e ciò che concordiamo su specifica, volumi e tempi viene rispettato." },
@@ -292,8 +292,8 @@ const en: Content = {
   },
   hero: {
     eyebrow: "Trading house · Oil & Gas · Rome",
-    headLead: "We move refined petroleum products",
-    headAccent: "to markets around the world.",
+    headLead: "Trading and supply of refined petroleum products",
+    headAccent: "for markets in constant evolution.",
     sub: "An Italian physical trading company: we buy, sell and coordinate supply of refined products between producers, refineries and industrial operators, with a network of partners across three continents.",
     ctaPrimary: "Request a quote",
     ctaSecondary: "See how we operate",
@@ -301,8 +301,8 @@ const en: Content = {
   },
   about: {
     eyebrow: "About us",
-    headLead: "A reliable partner in the",
-    headAccent: "physical trading of petroleum products.",
+    headLead: "An Italian trading company, with a network of suppliers and counterparties",
+    headAccent: "worldwide.",
     body: "Fortun SRL is an Italian company based in Rome. We trade refined petroleum products: we do not extract and do not refine — we move product that is already on-spec, from the markets where it enters circulation to the markets where it is needed. Our work is knowing where supply sits, where demand sits, and handling everything in between with rigour.",
     features: [
       { title: "Reliability and transparency", desc: "Clear terms before we commit, and what we agree on specification, volumes and timing is honoured." },

@@ -32,7 +32,7 @@
 **Eyebrow:** Trading internazionale · Prodotti petroliferi raffinati
 
 **Headline:**
-Spostiamo prodotti petroliferi raffinati tra i mercati che li producono e quelli che li consumano.
+Trading e supply di prodotti petroliferi raffinati per mercati in continua evoluzione.
 
 **Sub (riga fattuale):**
 Sede a Roma · operativi su Rotterdam, Houston e Fujairah · diesel, jet fuel, GPL, fuel oil, crude oil.
@@ -48,7 +48,7 @@ Sede a Roma · operativi su Rotterdam, Houston e Fujairah · diesel, jet fuel, G
 **Eyebrow:** Chi è Fortun
 
 **Headline:**
-Una società di trading italiana, con una rete di fornitori e controparti su tre continenti.
+Una società di trading italiana, con una rete di fornitori e controparti mondiale.
 
 **Body:**
 Fortun SRL è una società italiana con sede a Roma. Operiamo nel trading di prodotti petroliferi raffinati: acquistiamo, vendiamo e coordiniamo forniture tra produttori, raffinerie, distributori e operatori industriali. Non estraiamo e non raffiniamo: muoviamo prodotto già a specifica, dai mercati dove viene immesso a quelli dove serve. Il nostro lavoro è sapere dove c'è disponibilità, dove c'è domanda, e gestire tutto ciò che sta in mezzo.
@@ -308,7 +308,7 @@ Informativa sull'utilizzo dei cookie e delle tecnologie di tracciamento su quest
 **Eyebrow:** International trading · Refined petroleum products
 
 **Headline:**
-We move refined petroleum products between the markets that produce them and the markets that consume them.
+Trading and supply of refined petroleum products for markets in constant evolution.
 
 **Sub (factual line):**
 Based in Rome · operating across Rotterdam, Houston and Fujairah · diesel, jet fuel, LPG, fuel oil, crude oil.
@@ -324,7 +324,7 @@ Based in Rome · operating across Rotterdam, Houston and Fujairah · diesel, jet
 **Eyebrow:** Who Fortun is
 
 **Headline:**
-An Italian trading company, with a network of suppliers and counterparties across three continents.
+An Italian trading company, with a network of suppliers and counterparties worldwide.
 
 **Body:**
 Fortun SRL is an Italian company based in Rome. We trade refined petroleum products: we buy, sell and coordinate supply between producers, refineries, distributors and industrial operators. We do not extract and we do not refine — we move product that is already on-spec, from the markets where it enters circulation to the markets where it is needed. Our work is knowing where supply sits, where demand sits, and handling everything in between.
