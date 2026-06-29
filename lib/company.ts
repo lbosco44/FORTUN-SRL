@@ -16,7 +16,7 @@ export const company = {
   eori: "IT16828791000",
   shareCapital: { it: "€ 10.000,00 (versato € 2.500,00)", en: "€ 10,000.00 (paid-in € 2,500.00)" },
   foundingYear: "2022",
-  copyrightYear: "2026",
+  copyrightYear: "2022",
   address: {
     street: "Via Aldo Sandulli 91",
     postalCode: "00156",

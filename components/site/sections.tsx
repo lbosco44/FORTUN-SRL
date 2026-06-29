@@ -474,7 +474,6 @@ export function Contact({ locale, content }: { locale: Locale; content: Content 
               <Row label={contact.labels.email}>
                 <a className="text-cream hover:text-gold" href={`mailto:${company.email}`}>{company.email}</a>
               </Row>
-              <Row label={contact.labels.pec}><span className="break-all">{company.pec}</span></Row>
               <Row label={contact.labels.phone}>
                 {company.phone ? (
                   <a className="text-cream hover:text-gold" href={`tel:${company.phone.replace(/\s/g, "")}`}>{company.phone}</a>

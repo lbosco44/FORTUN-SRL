@@ -45,7 +45,6 @@ export function FooterLight({
                   {company.email}
                 </a>
               </li>
-              <li className="break-all">{company.pec}</li>
               <li>
                 {company.address.street}, {company.address.postalCode} {company.address.city} ({company.address.province})
               </li>
@@ -57,9 +56,7 @@ export function FooterLight({
             <dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-sm text-ink-soft sm:grid-cols-2">
               <Row k={locale === "it" ? "Ragione sociale" : "Legal name"} v={company.legalName} />
               <Row k="P.IVA / C.F." v={company.vat} />
-              <Row k="REA" v={company.rea} />
               <Row k={locale === "it" ? "Codice EORI" : "EORI number"} v={company.eori} />
-              <Row k={locale === "it" ? "Capitale sociale" : "Share capital"} v={company.shareCapital[locale]} />
             </dl>
           </div>
         </div>
