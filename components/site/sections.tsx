@@ -249,7 +249,7 @@ export function Network_({ content }: { content: Content }) {
               {network.mapHubs}
             </span>
             <span className="flex items-center gap-2 text-[0.7rem] font-medium tracking-wide text-cream/70">
-              <span className="size-2 rounded-full border border-champagne/90" aria-hidden />
+              <span className="size-2 rounded-full bg-cream" aria-hidden />
               {network.mapSedi}
             </span>
           </div>

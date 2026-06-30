@@ -5,25 +5,28 @@ import { motion, useReducedMotion } from "motion/react";
 const VB_W = 1000;
 const VB_H = 478;
 
+const GOLD = "#e5c27d";
+const WHITE = "#f5f2ea";
+
 type Kind = "hub" | "sede";
 type Place = "above" | "below" | "left" | "right";
 type Node = { id: string; name: string; x: number; y: number; kind: Kind; place: Place };
 
 // Coordinate su mappa equirettangolare (crop lng[-130,75] lat[80,-18]):
 //   x = (lng + 130) / 205 * 1000   ·   y = (80 - lat) / 98 * 478
-// HUB = dove si svolge il trading · SEDI = dove l'azienda è presente.
+// HUB = dove si svolge il trading (icona derrick, oro) · SEDI = dove siamo presenti (icona casa, bianco).
 const NODES: Node[] = [
   // HUB operativi
   { id: "houston", name: "HOUSTON", x: 169, y: 245, kind: "hub", place: "below" },
   { id: "rotterdam", name: "ROTTERDAM", x: 656, y: 137, kind: "hub", place: "above" },
   { id: "durazzo", name: "DURAZZO", x: 729, y: 189, kind: "hub", place: "above" },
-  { id: "mersin", name: "MERSIN", x: 803, y: 211, kind: "hub", place: "below" },
+  { id: "mersin", name: "MERSIN", x: 803, y: 211, kind: "hub", place: "right" },
   { id: "fujairah", name: "FUJAIRAH", x: 909, y: 268, kind: "hub", place: "left" },
-  // SEDI (solo punto, senza etichetta: i nomi vivono nei numeri-ancora + legenda)
+  // SEDI
   { id: "roma", name: "ROMA", x: 695, y: 186, kind: "sede", place: "left" },
-  { id: "siracusa", name: "SIRACUSA", x: 701, y: 214, kind: "sede", place: "below" },
-  { id: "tirana", name: "TIRANA", x: 744, y: 181, kind: "sede", place: "right" },
-  { id: "dubai", name: "DUBAI", x: 889, y: 281, kind: "sede", place: "below" },
+  { id: "siracusa", name: "SIRACUSA", x: 712, y: 213, kind: "sede", place: "below" },
+  { id: "tirana", name: "TIRANA", x: 745, y: 180, kind: "sede", place: "right" },
+  { id: "dubai", name: "DUBAI", x: 889, y: 283, kind: "sede", place: "below" },
 ];
 const byId: Record<string, Node> = Object.fromEntries(NODES.map((c) => [c.id, c]));
 
@@ -44,17 +47,15 @@ function arc(a: Node, b: Node): string {
   return `M ${a.x} ${a.y} Q ${mx} ${cy.toFixed(1)} ${b.x} ${b.y}`;
 }
 
-function chip(c: Node) {
-  const w = c.name.length * 7.4 + 22;
-  const h = 24;
-  const gap = 13;
-  let cx = c.x;
-  let cy = c.y;
-  if (c.place === "below") cy = c.y + gap + h / 2;
-  else if (c.place === "above") cy = c.y - gap - h / 2;
-  else if (c.place === "right") cx = c.x + gap + w / 2;
-  else cx = c.x - gap - w / 2;
-  return { w, h, cx, cy };
+// Posizione/ancoraggio del nome rispetto al punto, in base a place e tipo.
+function label(n: Node) {
+  const hub = n.kind === "hub";
+  const v = hub ? 13 : 11; // offset verticale
+  const h = hub ? 12 : 10; // offset orizzontale
+  if (n.place === "above") return { x: n.x, y: n.y - v, anchor: "middle" as const };
+  if (n.place === "below") return { x: n.x, y: n.y + v + 4, anchor: "middle" as const };
+  if (n.place === "right") return { x: n.x + h, y: n.y + 3, anchor: "start" as const };
+  return { x: n.x - h, y: n.y + 3, anchor: "end" as const };
 }
 
 export function NetworkMap({ className }: { className?: string }) {
@@ -97,48 +98,71 @@ export function NetworkMap({ className }: { className?: string }) {
         />
       ))}
 
-      {/* SEDI — punto champagne con anello sottile, senza alone né etichetta */}
-      {sedi.map((c) => (
-        <g key={c.id}>
-          <circle cx={c.x} cy={c.y} r={5} fill="none" stroke="#e5c27d" strokeWidth={1} strokeOpacity={0.7} />
-          <circle cx={c.x} cy={c.y} r={2.3} fill="#f5f2ea" />
-        </g>
-      ))}
-
-      {/* HUB — alone pulsante, anello oro, etichetta */}
-      {hubs.map((c, i) => {
-        const { w, h, cx, cy } = chip(c);
+      {/* SEDI — icona casa bianca + nome bianco (più piccolo), senza linee */}
+      {sedi.map((c) => {
+        const l = label(c);
         return (
           <g key={c.id}>
-            <circle cx={c.x} cy={c.y} r={18} fill="url(#fortun-hub-glow)">
+            <g transform={`translate(${c.x} ${c.y})`}>
+              <path d="M0 -6.5 L6 -1 L6 6 L-6 6 L-6 -1 Z" fill={WHITE} />
+              <rect x="-1.7" y="1.4" width="3.4" height="4.6" fill="#0a0e14" fillOpacity="0.85" />
+            </g>
+            <text
+              x={l.x}
+              y={l.y}
+              textAnchor={l.anchor}
+              fontFamily="var(--font-sans), sans-serif"
+              fontSize={7.5}
+              fontWeight={500}
+              letterSpacing={0.6}
+              fill={WHITE}
+              stroke="#0a0e14"
+              strokeWidth={2.4}
+              strokeLinejoin="round"
+              paintOrder="stroke"
+            >
+              {c.name}
+            </text>
+          </g>
+        );
+      })}
+
+      {/* HUB — alone pulsante + icona derrick oro + nome oro */}
+      {hubs.map((c, i) => {
+        const l = label(c);
+        return (
+          <g key={c.id}>
+            <circle cx={c.x} cy={c.y} r={17} fill="url(#fortun-hub-glow)">
               {!reduce && (
-                <animate attributeName="opacity" values="0.45;1;0.45" dur="3s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
               )}
             </circle>
-            <circle cx={c.x} cy={c.y} r={6.5} fill="none" stroke="#c99a4e" strokeWidth={1} strokeOpacity={0.7} />
-            <circle cx={c.x} cy={c.y} r={3.2} fill="#e5c27d" />
-
-            <rect
-              x={cx - w / 2}
-              y={cy - h / 2}
-              width={w}
-              height={h}
-              rx={5}
-              fill="#080c14"
-              fillOpacity={0.72}
-              stroke="#c99a4e"
-              strokeOpacity={0.32}
-              strokeWidth={0.75}
-            />
+            <g
+              transform={`translate(${c.x} ${c.y})`}
+              fill="none"
+              stroke={GOLD}
+              strokeWidth={1.1}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {/* gambe + sommità + base + traverse + asta */}
+              <path d="M-5 8 L-1.8 -6 M5 8 L1.8 -6 M-1.8 -6 L1.8 -6 M-6 8 L6 8" />
+              <path d="M-4 3 L4 3 M-3 -1.5 L3 -1.5" strokeOpacity={0.75} />
+              <path d="M0 -6 L0 -9.5" />
+            </g>
             <text
-              x={cx}
-              y={cy + 3.6}
-              textAnchor="middle"
+              x={l.x}
+              y={l.y}
+              textAnchor={l.anchor}
               fontFamily="var(--font-sans), sans-serif"
-              fontSize={10.5}
+              fontSize={9.5}
               fontWeight={600}
-              letterSpacing={1.4}
-              fill="#f5f2ea"
+              letterSpacing={1}
+              fill={GOLD}
+              stroke="#0a0e14"
+              strokeWidth={2.8}
+              strokeLinejoin="round"
+              paintOrder="stroke"
             >
               {c.name}
             </text>
