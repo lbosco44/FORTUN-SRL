@@ -97,9 +97,9 @@ export interface Content {
 
 const it: Content = {
   meta: {
-    title: "Fortun SRL — Trading di prodotti petroliferi raffinati",
+    title: "Fortun SRL — Trading di prodotti petroliferi e sottoprodotti petroliferi",
     description:
-      "Trading fisico internazionale di prodotti petroliferi raffinati. Hub a Rotterdam, Houston e Fujairah. Società italiana, sede a Roma.",
+      "Trading fisico internazionale di prodotti petroliferi e sottoprodotti petroliferi. Hub a Rotterdam, Houston e Fujairah. Società italiana, sede a Roma.",
   },
   skip: "Vai al contenuto",
   nav: {
@@ -115,9 +115,9 @@ const it: Content = {
   },
   hero: {
     eyebrow: "Trading house · Oil & Gas · Roma",
-    headLead: "Trading e supply di prodotti petroliferi raffinati",
+    headLead: "Trading e supply di prodotti petroliferi e sottoprodotti petroliferi",
     headAccent: "per mercati in continua evoluzione.",
-    sub: "Società italiana di trading fisico: acquistiamo, vendiamo e coordiniamo forniture di prodotti raffinati tra produttori, raffinerie e operatori industriali, con una rete di partner su tre continenti.",
+    sub: "Società italiana di trading fisico: acquistiamo, vendiamo e coordiniamo forniture di prodotti petroliferi e sottoprodotti petroliferi tra produttori, raffinerie e operatori industriali, con una rete di partner su tre continenti.",
     ctaPrimary: "Richiedi una quotazione",
     ctaSecondary: "Scopri come operiamo",
     features: ["Partner affidabile", "Presenza globale", "Logistica integrata", "Operatività concreta"],
@@ -126,17 +126,17 @@ const it: Content = {
     eyebrow: "Chi siamo",
     headLead: "Una società di trading italiana, con una rete di fornitori e controparti",
     headAccent: "mondiale.",
-    body: "Fortun SRL è una società italiana con sede a Roma. Operiamo nel trading di prodotti petroliferi raffinati: non estraiamo e non raffiniamo, muoviamo prodotto già a specifica dai mercati dove viene immesso a quelli dove serve. Il nostro lavoro è sapere dove c'è disponibilità, dove c'è domanda, e gestire con rigore tutto ciò che sta in mezzo.",
+    body: "Fortun SRL è una società italiana con sede a Roma. Operiamo nel trading di prodotti petroliferi e sottoprodotti petroliferi: non estraiamo e non raffiniamo, muoviamo prodotto già a specifica dai mercati dove viene immesso a quelli dove serve. Il nostro lavoro è sapere dove c'è disponibilità, dove c'è domanda, e gestire con rigore tutto ciò che sta in mezzo.",
     features: [
       { title: "Affidabilità e trasparenza", desc: "Termini chiari prima di impegnarci, e ciò che concordiamo su specifica, volumi e tempi viene rispettato." },
-      { title: "Accesso globale", desc: "Una rete di fornitori e controparti che ci dà accesso ai principali snodi del prodotto raffinato." },
+      { title: "Accesso globale", desc: "Una rete di fornitori e controparti che ci dà accesso ai principali snodi dei prodotti petroliferi e sottoprodotti petroliferi." },
       { title: "Soluzioni su misura", desc: "Ogni fornitura è strutturata sulle esigenze reali della controparte, per prodotto, quantità e destinazione." },
     ],
     stats: [
-      { num: 2022, suffix: "", label: "Operativi dal", desc: "Società italiana di trading fisico di prodotti petroliferi raffinati, con sede a Roma." },
+      { num: 2022, suffix: "", label: "Operativi dal", desc: "Società italiana di trading fisico di prodotti petroliferi e sottoprodotti petroliferi, con sede a Roma." },
       { num: 5, suffix: "", label: "Hub operativi", desc: "Rotterdam, Houston, Fujairah, Durazzo e Mersin — dove si svolge l'attività di compravendita." },
       { num: 4, suffix: "", label: "Sedi", desc: "Roma, Siracusa, Dubai e Tirana — dove siamo presenti." },
-      { num: 5, suffix: "", label: "Prodotti raffinati", desc: "Diesel EN590, Jet Fuel A1, GPL, Fuel Oil e Crude Oil." },
+      { num: 5, suffix: "", label: "Prodotti trattati", desc: "Diesel EN590, Jet Fuel A1, GPL, Fuel Oil e Crude Oil." },
     ],
     badges: [
       { value: "3", label: "Continenti presidiati" },
@@ -183,7 +183,7 @@ const it: Content = {
     headLead: "Soluzioni energetiche.",
     headAccent: "Valore reale.",
     intro:
-      "Trattiamo una gamma di prodotti petroliferi raffinati riconosciuti dal mercato internazionale, definiti per specifica, quantità e punto di consegna.",
+      "Trattiamo una gamma di prodotti petroliferi e sottoprodotti petroliferi riconosciuti dal mercato internazionale, definiti per specifica, quantità e punto di consegna.",
     productsTitle: "Prodotti",
     products: [
       { name: "Diesel", spec: "EN590", desc: "Gasolio per autotrazione conforme allo standard europeo EN590." },
@@ -254,7 +254,7 @@ const it: Content = {
     phoneTodo: "Disponibile a breve",
   },
   footer: {
-    tagline: "Trading internazionale di prodotti petroliferi raffinati. Da Roma ai principali hub del mondo.",
+    tagline: "Trading internazionale di prodotti petroliferi e sottoprodotti petroliferi. Da Roma ai principali hub del mondo.",
     navTitle: "Sezioni",
     contactTitle: "Contatti",
     companyTitle: "Dati aziendali",
@@ -279,9 +279,9 @@ const it: Content = {
 
 const en: Content = {
   meta: {
-    title: "Fortun SRL — Refined petroleum products trading",
+    title: "Fortun SRL — Petroleum products and by-products trading",
     description:
-      "International physical trading of refined petroleum products. Hubs in Rotterdam, Houston and Fujairah. Italian company, based in Rome.",
+      "International physical trading of petroleum products and by-products. Hubs in Rotterdam, Houston and Fujairah. Italian company, based in Rome.",
   },
   skip: "Skip to content",
   nav: {
@@ -297,9 +297,9 @@ const en: Content = {
   },
   hero: {
     eyebrow: "Trading house · Oil & Gas · Rome",
-    headLead: "Trading and supply of refined petroleum products",
+    headLead: "Trading and supply of petroleum products and by-products",
     headAccent: "for markets in constant evolution.",
-    sub: "An Italian physical trading company: we buy, sell and coordinate supply of refined products between producers, refineries and industrial operators, with a network of partners across three continents.",
+    sub: "An Italian physical trading company: we buy, sell and coordinate supply of petroleum products and by-products between producers, refineries and industrial operators, with a network of partners across three continents.",
     ctaPrimary: "Request a quote",
     ctaSecondary: "See how we operate",
     features: ["Reliable partner", "Global presence", "Integrated logistics", "Concrete operations"],
@@ -308,17 +308,17 @@ const en: Content = {
     eyebrow: "About us",
     headLead: "An Italian trading company, with a network of suppliers and counterparties",
     headAccent: "worldwide.",
-    body: "Fortun SRL is an Italian company based in Rome. We trade refined petroleum products: we do not extract and do not refine — we move product that is already on-spec, from the markets where it enters circulation to the markets where it is needed. Our work is knowing where supply sits, where demand sits, and handling everything in between with rigour.",
+    body: "Fortun SRL is an Italian company based in Rome. We trade petroleum products and by-products: we do not extract and do not refine — we move product that is already on-spec, from the markets where it enters circulation to the markets where it is needed. Our work is knowing where supply sits, where demand sits, and handling everything in between with rigour.",
     features: [
       { title: "Reliability and transparency", desc: "Clear terms before we commit, and what we agree on specification, volumes and timing is honoured." },
-      { title: "Global access", desc: "A network of suppliers and counterparties that gives us access to the main refined-product hubs." },
+      { title: "Global access", desc: "A network of suppliers and counterparties that gives us access to the main petroleum-product and by-product hubs." },
       { title: "Tailored solutions", desc: "Every supply is structured around the counterparty's real needs — by product, quantity and destination." },
     ],
     stats: [
-      { num: 2022, suffix: "", label: "Operating since", desc: "Italian physical trading company for refined petroleum products, based in Rome." },
+      { num: 2022, suffix: "", label: "Operating since", desc: "Italian physical trading company for petroleum products and by-products, based in Rome." },
       { num: 5, suffix: "", label: "Operating hubs", desc: "Rotterdam, Houston, Fujairah, Durrës and Mersin — where the trading activity takes place." },
       { num: 4, suffix: "", label: "Offices", desc: "Rome, Siracusa, Dubai and Tirana — where we are present." },
-      { num: 5, suffix: "", label: "Refined products", desc: "Diesel EN590, Jet Fuel A1, LPG, Fuel Oil and Crude Oil." },
+      { num: 5, suffix: "", label: "Products handled", desc: "Diesel EN590, Jet Fuel A1, LPG, Fuel Oil and Crude Oil." },
     ],
     badges: [
       { value: "3", label: "Continents covered" },
@@ -365,7 +365,7 @@ const en: Content = {
     headLead: "Energy solutions.",
     headAccent: "Real value.",
     intro:
-      "We trade a range of refined petroleum products recognized on the international market, defined by specification, quantity and delivery point.",
+      "We trade a range of petroleum products and by-products recognized on the international market, defined by specification, quantity and delivery point.",
     productsTitle: "Products",
     products: [
       { name: "Diesel", spec: "EN590", desc: "Automotive gasoil compliant with the European EN590 standard." },
@@ -436,7 +436,7 @@ const en: Content = {
     phoneTodo: "Available soon",
   },
   footer: {
-    tagline: "International trading of refined petroleum products. From Rome to the world's main hubs.",
+    tagline: "International trading of petroleum products and by-products. From Rome to the world's main hubs.",
     navTitle: "Sections",
     contactTitle: "Contact",
     companyTitle: "Company details",

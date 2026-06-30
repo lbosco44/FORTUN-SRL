@@ -6,7 +6,7 @@ import { SmoothScroll } from "@/components/site/SmoothScroll";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Fortun SRL — Trading di prodotti petroliferi raffinati", template: "%s" },
+  title: { default: "Fortun SRL — Trading di prodotti petroliferi e sottoprodotti petroliferi", template: "%s" },
   applicationName: company.legalName,
   openGraph: { siteName: company.legalName },
 };

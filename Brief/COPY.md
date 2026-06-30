@@ -29,10 +29,10 @@
 
 ## SEZIONE 1 — HERO
 
-**Eyebrow:** Trading internazionale · Prodotti petroliferi raffinati
+**Eyebrow:** Trading internazionale · Prodotti petroliferi e sottoprodotti petroliferi
 
 **Headline:**
-Trading e supply di prodotti petroliferi raffinati per mercati in continua evoluzione.
+Trading e supply di prodotti petroliferi e sottoprodotti petroliferi per mercati in continua evoluzione.
 
 **Sub (riga fattuale):**
 Sede a Roma · operativi su Rotterdam, Houston e Fujairah · diesel, jet fuel, GPL, fuel oil, crude oil.
@@ -51,11 +51,11 @@ Sede a Roma · operativi su Rotterdam, Houston e Fujairah · diesel, jet fuel, G
 Una società di trading italiana, con una rete di fornitori e controparti mondiale.
 
 **Body:**
-Fortun SRL è una società italiana con sede a Roma. Operiamo nel trading di prodotti petroliferi raffinati: acquistiamo, vendiamo e coordiniamo forniture tra produttori, raffinerie, distributori e operatori industriali. Non estraiamo e non raffiniamo: muoviamo prodotto già a specifica, dai mercati dove viene immesso a quelli dove serve. Il nostro lavoro è sapere dove c'è disponibilità, dove c'è domanda, e gestire tutto ciò che sta in mezzo.
+Fortun SRL è una società italiana con sede a Roma. Operiamo nel trading di prodotti petroliferi e sottoprodotti petroliferi: acquistiamo, vendiamo e coordiniamo forniture tra produttori, raffinerie, distributori e operatori industriali. Non estraiamo e non raffiniamo: muoviamo prodotto già a specifica, dai mercati dove viene immesso a quelli dove serve. Il nostro lavoro è sapere dove c'è disponibilità, dove c'è domanda, e gestire tutto ciò che sta in mezzo.
 
 **Numeri-ancora:**
 - **2022** — anno di costituzione della società
-- **5** prodotti raffinati trattati
+- **5** prodotti petroliferi e sottoprodotti petroliferi trattati
 - 3 hub operativi su tre fusi orari — ARA, US Gulf, Middle East
 
 ---
@@ -67,14 +67,14 @@ Fortun SRL è una società italiana con sede a Roma. Operiamo nel trading di pro
 **Eyebrow:** Dove operiamo
 
 **Headline:**
-Tre hub, sui principali snodi del prodotto raffinato.
+Tre hub, sui principali snodi del prodotto petrolifero.
 
 **Intro:**
-La nostra operatività si appoggia ai tre nodi che concentrano gran parte degli scambi mondiali di prodotti raffinati. Ogni hub ci dà accesso a stoccaggio, controparti e logistica nella sua area.
+La nostra operatività si appoggia ai tre nodi che concentrano gran parte degli scambi mondiali di prodotti petroliferi e sottoprodotti petroliferi. Ogni hub ci dà accesso a stoccaggio, controparti e logistica nella sua area.
 
 **Hub 1 — Rotterdam**
 - **Macro-area:** ARA (Amsterdam–Rotterdam–Anversa)
-- **Ruolo:** Punto di riferimento europeo per lo stoccaggio e la distribuzione di prodotti raffinati. Da qui coordiniamo le forniture verso il Nord Europa e il bacino atlantico.
+- **Ruolo:** Punto di riferimento europeo per lo stoccaggio e la distribuzione di prodotti petroliferi e sottoprodotti petroliferi. Da qui coordiniamo le forniture verso il Nord Europa e il bacino atlantico.
 
 **Hub 2 — Houston**
 - **Macro-area:** US Gulf (Golfo del Messico, USA)
@@ -93,7 +93,7 @@ La nostra operatività si appoggia ai tre nodi che concentrano gran parte degli 
 **Eyebrow:** Cosa trattiamo
 
 **Headline:**
-Cinque prodotti raffinati, trattati a specifica.
+Cinque prodotti petroliferi e sottoprodotti petroliferi, trattati a specifica.
 
 **Intro:**
 Lavoriamo su prodotti standardizzati e riconosciuti dal mercato internazionale. Ogni fornitura è definita per specifica, quantità e punto di consegna.
@@ -128,7 +128,7 @@ Dal reperimento alla consegna, gestiamo l'intera operazione commerciale.
 Il nostro ruolo non si esaurisce nel mettere in contatto due parti. Seguiamo la fornitura lungo tutta la catena, dalla ricerca del prodotto al coordinamento della consegna.
 
 **Servizio 1 — Trading internazionale di commodities**
-Acquistiamo e vendiamo prodotti petroliferi raffinati sui mercati internazionali, gestendo prezzo, controparti e termini contrattuali.
+Acquistiamo e vendiamo prodotti petroliferi e sottoprodotti petroliferi sui mercati internazionali, gestendo prezzo, controparti e termini contrattuali.
 
 **Servizio 2 — Ricerca e approvvigionamento globale**
 Individuiamo disponibilità di prodotto presso raffinerie, produttori e fornitori, valutando origine, specifica e affidabilità della controparte.
@@ -140,7 +140,7 @@ Gestiamo i tempi e i passaggi della fornitura tra origine e destinazione, alline
 Strutturiamo le operazioni tra le parti, occupandoci di documentazione, termini e condizioni della transazione.
 
 **Servizio 5 — Operazioni sui mercati internazionali**
-Operiamo sui mercati globali del prodotto raffinato, leggendo disponibilità, domanda e flussi tra le aree.
+Operiamo sui mercati globali del prodotto petrolifero, leggendo disponibilità, domanda e flussi tra le aree.
 
 ---
 
@@ -160,7 +160,7 @@ In un mercato dove l'affidabilità della controparte conta quanto il prezzo, il 
 Trattiamo solo forniture che possiamo seguire fino in fondo. Definiamo termini chiari prima di impegnarci e rispettiamo quanto concordato su specifica, volumi e tempi.
 
 **Pilastro 2 — Presenza globale**
-Con hub su Rotterdam, Houston e Fujairah copriamo le aree dove si concentra la maggior parte degli scambi di prodotto raffinato. La presenza su più fusi orari ci permette di operare in continuità.
+Con hub su Rotterdam, Houston e Fujairah copriamo le aree dove si concentra la maggior parte degli scambi di prodotto petrolifero. La presenza su più fusi orari ci permette di operare in continuità.
 
 **Pilastro 3 — Approccio compliance-oriented**
 Lavoriamo nel rispetto delle normative che regolano il commercio internazionale di prodotti petroliferi. Verifichiamo le controparti e documentiamo le operazioni lungo l'intera catena.
@@ -220,7 +220,7 @@ Risposta entro 1–2 giorni lavorativi. Le richieste vengono lette dal team oper
 ## SEZIONE 8 — FOOTER
 
 **Tagline:**
-Trading internazionale di prodotti petroliferi raffinati. Da Roma ai principali hub del mondo.
+Trading internazionale di prodotti petroliferi e sottoprodotti petroliferi. Da Roma ai principali hub del mondo.
 
 **Dati aziendali:**
 - **Ragione sociale:** Fortun S.r.l.
@@ -305,10 +305,10 @@ Informativa sull'utilizzo dei cookie e delle tecnologie di tracciamento su quest
 
 ## SECTION 1 — HERO
 
-**Eyebrow:** International trading · Refined petroleum products
+**Eyebrow:** International trading · Petroleum products and by-products
 
 **Headline:**
-Trading and supply of refined petroleum products for markets in constant evolution.
+Trading and supply of petroleum products and by-products for markets in constant evolution.
 
 **Sub (factual line):**
 Based in Rome · operating across Rotterdam, Houston and Fujairah · diesel, jet fuel, LPG, fuel oil, crude oil.
@@ -327,11 +327,11 @@ Based in Rome · operating across Rotterdam, Houston and Fujairah · diesel, jet
 An Italian trading company, with a network of suppliers and counterparties worldwide.
 
 **Body:**
-Fortun SRL is an Italian company based in Rome. We trade refined petroleum products: we buy, sell and coordinate supply between producers, refineries, distributors and industrial operators. We do not extract and we do not refine — we move product that is already on-spec, from the markets where it enters circulation to the markets where it is needed. Our work is knowing where supply sits, where demand sits, and handling everything in between.
+Fortun SRL is an Italian company based in Rome. We trade petroleum products and by-products: we buy, sell and coordinate supply between producers, refineries, distributors and industrial operators. We do not extract and we do not refine — we move product that is already on-spec, from the markets where it enters circulation to the markets where it is needed. Our work is knowing where supply sits, where demand sits, and handling everything in between.
 
 **Anchor figures:**
 - **2022** — year the company was founded
-- **5** refined products handled
+- **5** petroleum products and by-products handled
 - 3 operating hubs across three time zones — ARA, US Gulf, Middle East
 
 ---
@@ -343,14 +343,14 @@ Fortun SRL is an Italian company based in Rome. We trade refined petroleum produ
 **Eyebrow:** Where we operate
 
 **Headline:**
-Three hubs, at the main junctions of the refined product trade.
+Three hubs, at the main junctions of the petroleum product trade.
 
 **Intro:**
-Our operations rest on the three nodes that concentrate much of the world's refined product flows. Each hub gives us access to storage, counterparties and logistics in its area.
+Our operations rest on the three nodes that concentrate much of the world's petroleum product flows. Each hub gives us access to storage, counterparties and logistics in its area.
 
 **Hub 1 — Rotterdam**
 - **Macro-area:** ARA (Amsterdam–Rotterdam–Antwerp)
-- **Role:** The European reference point for refined product storage and distribution. From here we coordinate supply into Northern Europe and the Atlantic basin.
+- **Role:** The European reference point for petroleum product storage and distribution. From here we coordinate supply into Northern Europe and the Atlantic basin.
 
 **Hub 2 — Houston**
 - **Macro-area:** US Gulf (Gulf of Mexico, USA)
@@ -369,7 +369,7 @@ Our operations rest on the three nodes that concentrate much of the world's refi
 **Eyebrow:** What we handle
 
 **Headline:**
-Five refined products, traded on-spec.
+Five petroleum products and by-products, traded on-spec.
 
 **Intro:**
 We work with standardized products recognized on the international market. Every supply is defined by specification, quantity and delivery point.
@@ -404,7 +404,7 @@ From sourcing to delivery, we manage the entire commercial operation.
 Our role does not end at putting two parties in touch. We follow the supply along the full chain, from finding the product to coordinating delivery.
 
 **Service 1 — International commodities trading**
-We buy and sell refined petroleum products on international markets, managing price, counterparties and contract terms.
+We buy and sell petroleum products and by-products on international markets, managing price, counterparties and contract terms.
 
 **Service 2 — Global sourcing and procurement**
 We identify product availability at refineries, producers and suppliers, assessing origin, specification and counterparty reliability.
@@ -416,7 +416,7 @@ We manage the timing and the stages of supply between origin and destination, al
 We structure transactions between the parties, handling documentation, terms and conditions of the deal.
 
 **Service 5 — International market operations**
-We operate on the global refined product markets, reading availability, demand and flows between regions.
+We operate on the global petroleum product markets, reading availability, demand and flows between regions.
 
 ---
 
@@ -436,7 +436,7 @@ In a market where counterparty reliability counts as much as price, the way we o
 We take on only supply we can see through to the end. We set clear terms before committing, and we hold to what was agreed on specification, volumes and timing.
 
 **Pillar 2 — Global presence**
-With hubs in Rotterdam, Houston and Fujairah, we cover the areas where most of the refined product trade concentrates. A presence across several time zones lets us operate without interruption.
+With hubs in Rotterdam, Houston and Fujairah, we cover the areas where most of the petroleum product trade concentrates. A presence across several time zones lets us operate without interruption.
 
 **Pillar 3 — Compliance-oriented approach**
 We work in line with the regulations governing the international trade in petroleum products. We vet counterparties and document operations along the full chain.
@@ -496,7 +496,7 @@ Reply within 1–2 business days. Enquiries are read by the operations team.
 ## SECTION 8 — FOOTER
 
 **Tagline:**
-International trading of refined petroleum products. From Rome to the world's main hubs.
+International trading of petroleum products and by-products. From Rome to the world's main hubs.
 
 **Company details:**
 - **Legal name:** Fortun S.r.l.

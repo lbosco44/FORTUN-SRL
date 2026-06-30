@@ -42,7 +42,7 @@ export function JsonLd({ locale }: { locale: Locale }) {
     ],
     knowsAbout: [
       "Oil and gas trading",
-      "Refined petroleum products",
+      "Petroleum products and by-products",
       "Diesel EN590",
       "Jet Fuel A1",
       "LPG",
@@ -76,7 +76,7 @@ export function JsonLd({ locale }: { locale: Locale }) {
   const offerCatalog = {
     "@type": "OfferCatalog",
     "@id": `${pageUrl}/#products`,
-    name: "Refined petroleum products — Fortun SRL",
+    name: "Petroleum products and by-products — Fortun SRL",
     inLanguage: locale,
     provider: { "@id": orgId },
     itemListElement: company.products.map((p) => ({
@@ -84,7 +84,7 @@ export function JsonLd({ locale }: { locale: Locale }) {
       itemOffered: {
         "@type": "Product",
         name: p,
-        category: p === "Crude Oil" ? "Crude petroleum" : "Refined petroleum products",
+        category: p === "Crude Oil" ? "Crude petroleum" : "Petroleum products and by-products",
       },
     })),
   };

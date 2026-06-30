@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Fortun SRL — Trading di prodotti petroliferi raffinati";
+export const alt = "Fortun SRL — Trading di prodotti petroliferi e sottoprodotti petroliferi";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -27,8 +27,8 @@ export default function OpengraphImage() {
           <div style={{ display: "flex", fontSize: 150, fontWeight: 800, letterSpacing: -4, lineHeight: 1 }}>
             FORTUN
           </div>
-          <div style={{ display: "flex", fontSize: 40, color: "#c99a4e", marginTop: 12 }}>
-            Trading di prodotti petroliferi raffinati
+          <div style={{ display: "flex", fontSize: 31, color: "#c99a4e", marginTop: 14 }}>
+            Trading di prodotti petroliferi e sottoprodotti petroliferi
           </div>
         </div>
         <div style={{ display: "flex", fontSize: 26, color: "#93a1b3" }}>

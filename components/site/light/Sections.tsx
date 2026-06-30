@@ -24,7 +24,7 @@ export function HeroLight({ content }: { content: Content }) {
           {/* Immagine grande arrotondata */}
           <Image
             src="/bg/light/hero-open.webp"
-            alt="Petroliera carica di prodotti raffinati in navigazione in mare aperto"
+            alt="Petroliera carica di prodotti petroliferi in navigazione in mare aperto"
             width={1400}
             height={787}
             priority
