@@ -5,25 +5,38 @@ import { motion, useReducedMotion } from "motion/react";
 const VB_W = 1000;
 const VB_H = 478;
 
+type Kind = "hub" | "sede";
 type Place = "above" | "below" | "left" | "right";
-type City = { id: string; name: string; x: number; y: number; place: Place };
+type Node = { id: string; name: string; x: number; y: number; kind: Kind; place: Place };
 
-// Coordinate esatte (mappa equirettangolare, crop lng[-130,75] lat[80,-18])
-const CITIES: City[] = [
-  { id: "houston", name: "HOUSTON", x: 169, y: 245, place: "below" },
-  { id: "rotterdam", name: "ROTTERDAM", x: 656, y: 137, place: "above" },
-  { id: "roma", name: "ROMA", x: 695, y: 186, place: "right" },
-  { id: "fujairah", name: "FUJAIRAH", x: 909, y: 268, place: "left" },
+// Coordinate su mappa equirettangolare (crop lng[-130,75] lat[80,-18]):
+//   x = (lng + 130) / 205 * 1000   ·   y = (80 - lat) / 98 * 478
+// HUB = dove si svolge il trading · SEDI = dove l'azienda è presente.
+const NODES: Node[] = [
+  // HUB operativi
+  { id: "houston", name: "HOUSTON", x: 169, y: 245, kind: "hub", place: "below" },
+  { id: "rotterdam", name: "ROTTERDAM", x: 656, y: 137, kind: "hub", place: "above" },
+  { id: "durazzo", name: "DURAZZO", x: 729, y: 189, kind: "hub", place: "above" },
+  { id: "mersin", name: "MERSIN", x: 803, y: 211, kind: "hub", place: "below" },
+  { id: "fujairah", name: "FUJAIRAH", x: 909, y: 268, kind: "hub", place: "left" },
+  // SEDI (solo punto, senza etichetta: i nomi vivono nei numeri-ancora + legenda)
+  { id: "roma", name: "ROMA", x: 695, y: 186, kind: "sede", place: "left" },
+  { id: "siracusa", name: "SIRACUSA", x: 701, y: 214, kind: "sede", place: "below" },
+  { id: "tirana", name: "TIRANA", x: 744, y: 181, kind: "sede", place: "right" },
+  { id: "dubai", name: "DUBAI", x: 889, y: 281, kind: "sede", place: "below" },
 ];
-const byId: Record<string, City> = Object.fromEntries(CITIES.map((c) => [c.id, c]));
+const byId: Record<string, Node> = Object.fromEntries(NODES.map((c) => [c.id, c]));
+
+// Rotte commerciali: collegano gli HUB tra loro.
 const EDGES: [string, string][] = [
   ["houston", "rotterdam"],
-  ["rotterdam", "roma"],
-  ["roma", "fujairah"],
+  ["rotterdam", "durazzo"],
+  ["durazzo", "mersin"],
+  ["mersin", "fujairah"],
   ["rotterdam", "fujairah"],
 ];
 
-function arc(a: City, b: City): string {
+function arc(a: Node, b: Node): string {
   const mx = (a.x + b.x) / 2;
   const my = (a.y + b.y) / 2;
   const dist = Math.hypot(b.x - a.x, b.y - a.y);
@@ -31,7 +44,7 @@ function arc(a: City, b: City): string {
   return `M ${a.x} ${a.y} Q ${mx} ${cy.toFixed(1)} ${b.x} ${b.y}`;
 }
 
-function chip(c: City) {
+function chip(c: Node) {
   const w = c.name.length * 7.4 + 22;
   const h = 24;
   const gap = 13;
@@ -46,13 +59,16 @@ function chip(c: City) {
 
 export function NetworkMap({ className }: { className?: string }) {
   const reduce = useReducedMotion();
+  const hubs = NODES.filter((n) => n.kind === "hub");
+  const sedi = NODES.filter((n) => n.kind === "sede");
+
   return (
     <svg
       viewBox={`0 0 ${VB_W} ${VB_H}`}
       preserveAspectRatio="xMidYMid slice"
       className={className}
       role="img"
-      aria-label="Rete operativa: Houston, Rotterdam, Roma e Fujairah collegate sulla mappa mondiale."
+      aria-label="Rete operativa Fortun: hub di Rotterdam, Houston, Fujairah, Durazzo e Mersin; sedi a Roma, Siracusa, Dubai e Tirana, sulla mappa mondiale."
     >
       <defs>
         <radialGradient id="fortun-hub-glow" cx="50%" cy="50%" r="50%">
@@ -64,6 +80,7 @@ export function NetworkMap({ className }: { className?: string }) {
 
       <image href="/bg/world-night.webp" x="0" y="0" width={VB_W} height={VB_H} preserveAspectRatio="xMidYMid slice" />
 
+      {/* Rotte tra gli hub */}
       {EDGES.map(([from, to], i) => (
         <motion.path
           key={i}
@@ -80,7 +97,16 @@ export function NetworkMap({ className }: { className?: string }) {
         />
       ))}
 
-      {CITIES.map((c, i) => {
+      {/* SEDI — punto champagne con anello sottile, senza alone né etichetta */}
+      {sedi.map((c) => (
+        <g key={c.id}>
+          <circle cx={c.x} cy={c.y} r={5} fill="none" stroke="#e5c27d" strokeWidth={1} strokeOpacity={0.7} />
+          <circle cx={c.x} cy={c.y} r={2.3} fill="#f5f2ea" />
+        </g>
+      ))}
+
+      {/* HUB — alone pulsante, anello oro, etichetta */}
+      {hubs.map((c, i) => {
         const { w, h, cx, cy } = chip(c);
         return (
           <g key={c.id}>
@@ -92,7 +118,6 @@ export function NetworkMap({ className }: { className?: string }) {
             <circle cx={c.x} cy={c.y} r={6.5} fill="none" stroke="#c99a4e" strokeWidth={1} strokeOpacity={0.7} />
             <circle cx={c.x} cy={c.y} r={3.2} fill="#e5c27d" />
 
-            {/* label elegante con sfondo */}
             <rect
               x={cx - w / 2}
               y={cy - h / 2}

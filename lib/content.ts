@@ -33,6 +33,8 @@ export interface Content {
     points: string[];
     cta: string;
     legend: string[];
+    mapHubs: string;
+    mapSedi: string;
   };
   process: {
     eyebrow: string;
@@ -132,7 +134,8 @@ const it: Content = {
     ],
     stats: [
       { num: 2022, suffix: "", label: "Operativi dal", desc: "Società italiana di trading fisico di prodotti petroliferi raffinati, con sede a Roma." },
-      { num: 3, suffix: "", label: "Hub operativi", desc: "Rotterdam, Houston e Fujairah — ARA, US Gulf e Middle East." },
+      { num: 5, suffix: "", label: "Hub operativi", desc: "Rotterdam, Houston, Fujairah, Durazzo e Mersin — dove si svolge l'attività di compravendita." },
+      { num: 4, suffix: "", label: "Sedi", desc: "Roma, Siracusa, Dubai e Tirana — dove siamo presenti." },
       { num: 5, suffix: "", label: "Prodotti raffinati", desc: "Diesel EN590, Jet Fuel A1, GPL, Fuel Oil e Crude Oil." },
     ],
     badges: [
@@ -154,6 +157,8 @@ const it: Content = {
     ],
     cta: "Scopri come operiamo",
     legend: ["Hub logistici", "Terminal & Port", "Rotte commerciali"],
+    mapHubs: "Hub operativi",
+    mapSedi: "Sedi",
   },
   process: {
     eyebrow: "Come operiamo",
@@ -311,7 +316,8 @@ const en: Content = {
     ],
     stats: [
       { num: 2022, suffix: "", label: "Operating since", desc: "Italian physical trading company for refined petroleum products, based in Rome." },
-      { num: 3, suffix: "", label: "Operating hubs", desc: "Rotterdam, Houston and Fujairah — ARA, US Gulf and Middle East." },
+      { num: 5, suffix: "", label: "Operating hubs", desc: "Rotterdam, Houston, Fujairah, Durrës and Mersin — where the trading activity takes place." },
+      { num: 4, suffix: "", label: "Offices", desc: "Rome, Siracusa, Dubai and Tirana — where we are present." },
       { num: 5, suffix: "", label: "Refined products", desc: "Diesel EN590, Jet Fuel A1, LPG, Fuel Oil and Crude Oil." },
     ],
     badges: [
@@ -333,6 +339,8 @@ const en: Content = {
     ],
     cta: "See how we operate",
     legend: ["Logistics hubs", "Terminal & Port", "Trade routes"],
+    mapHubs: "Operating hubs",
+    mapSedi: "Offices",
   },
   process: {
     eyebrow: "How we operate",

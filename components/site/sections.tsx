@@ -108,7 +108,7 @@ export function Hero({ content }: { content: Content }) {
 export function About({ content }: { content: Content }) {
   const { about } = content;
   const featIcons = [ShieldCheck, Globe, Layers];
-  const statIcons = [Building2, Globe, Droplet];
+  const statIcons = [Building2, Globe, MapPin, Droplet];
   const badgeIcons = [Map, MapPin, Users, Globe];
   return (
     <section id={anchors.about} className="section-y relative isolate overflow-hidden bg-cream">
@@ -240,6 +240,18 @@ export function Network_({ content }: { content: Content }) {
                 className="relative text-[clamp(2.25rem,5.5vw,4.25rem)] leading-[0.98] [text-shadow:0_2px_30px_rgba(0,0,0,0.55)]"
               />
             </div>
+          </div>
+
+          {/* Legenda: distinzione hub vs sedi */}
+          <div className="pointer-events-none absolute bottom-3 right-4 z-10 flex flex-col gap-1.5 sm:bottom-5 sm:right-6">
+            <span className="flex items-center gap-2 text-[0.7rem] font-medium tracking-wide text-cream/85">
+              <span className="size-2.5 rounded-full bg-gold shadow-[0_0_8px_rgba(201,154,78,0.9)]" aria-hidden />
+              {network.mapHubs}
+            </span>
+            <span className="flex items-center gap-2 text-[0.7rem] font-medium tracking-wide text-cream/70">
+              <span className="size-2 rounded-full border border-champagne/90" aria-hidden />
+              {network.mapSedi}
+            </span>
           </div>
         </div>
       </Reveal>

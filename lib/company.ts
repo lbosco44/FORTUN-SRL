@@ -36,10 +36,20 @@ export const company = {
   linkedin: null as string | null,
   responseTime: { it: "1–2 giorni lavorativi", en: "1–2 business days" },
   logoPath: "/fortun-logo.png",
+  // HUB operativi: dove si svolge l'attività di compravendita/trading.
   hubs: [
     { name: "Rotterdam", area: "ARA", locality: "Rotterdam", country: "NL" },
     { name: "Houston", area: "US Gulf", locality: "Houston", region: "TX", country: "US" },
     { name: "Fujairah", area: "Middle East", locality: "Fujairah", country: "AE" },
+    { name: "Durazzo", area: "Albania", locality: "Durrës", country: "AL" },
+    { name: "Mersin", area: "Türkiye", locality: "Mersin", country: "TR" },
+  ],
+  // SEDI: dove l'azienda è presente fisicamente.
+  sedi: [
+    { name: "Roma", country: "IT" },
+    { name: "Siracusa", country: "IT" },
+    { name: "Dubai", country: "AE" },
+    { name: "Tirana", country: "AL" },
   ],
   products: ["Diesel EN590", "Jet Fuel A1", "LPG", "Fuel Oil", "Crude Oil"],
 } as const;

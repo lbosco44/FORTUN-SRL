@@ -151,6 +151,18 @@ export function NetworkLight({ content }: { content: Content }) {
               />
             </div>
           </div>
+
+          {/* Legenda: distinzione hub vs sedi */}
+          <div className="pointer-events-none absolute bottom-3 right-4 z-10 flex flex-col gap-1.5 sm:bottom-5 sm:right-6">
+            <span className="flex items-center gap-2 text-[0.7rem] font-medium tracking-wide text-paper/85">
+              <span className="size-2.5 rounded-full bg-gold shadow-[0_0_8px_rgba(201,154,78,0.9)]" aria-hidden />
+              {network.mapHubs}
+            </span>
+            <span className="flex items-center gap-2 text-[0.7rem] font-medium tracking-wide text-paper/70">
+              <span className="size-2 rounded-full border border-champagne/90" aria-hidden />
+              {network.mapSedi}
+            </span>
+          </div>
         </div>
       </Reveal>
 
