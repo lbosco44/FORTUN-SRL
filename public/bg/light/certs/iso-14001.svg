@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <path id="top-14001" d="M 38 110 A 72 72 0 0 1 182 110" fill="none"/>
+    <path id="bot-14001" d="M 44 110 A 66 66 0 0 0 176 110" fill="none"/>
+  </defs>
+  <circle cx="110" cy="110" r="101" fill="#ffffff" stroke="#15191f" stroke-width="2.5"/>
+  <circle cx="110" cy="110" r="88" fill="none" stroke="#c99a4e" stroke-width="1.4"/>
+  <circle cx="110" cy="110" r="84" fill="none" stroke="#15191f" stroke-opacity="0.15" stroke-width="0.8"/>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="12.5" letter-spacing="2.4" fill="#15191f" font-weight="600">
+    <textPath href="#top-14001" startOffset="50%" text-anchor="middle">CERTIFIED MANAGEMENT SYSTEM</textPath>
+  </text>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="10.5" letter-spacing="3" fill="#9a6e3b">
+    <textPath href="#bot-14001" startOffset="50%" text-anchor="middle">INTERNATIONAL STANDARD</textPath>
+  </text>
+  <polygon points="70.0,106.0 71.6,109.8 75.7,110.1 72.6,112.8 73.5,116.9 70.0,114.7 66.5,116.9 67.4,112.8 64.3,110.1 68.4,109.8" fill="#c99a4e"/><polygon points="150.0,106.0 151.6,109.8 155.7,110.1 152.6,112.8 153.5,116.9 150.0,114.7 146.5,116.9 147.4,112.8 144.3,110.1 148.4,109.8" fill="#c99a4e"/>
+  <text x="110" y="92" font-family="Georgia, serif" font-size="15" letter-spacing="5" fill="#9a6e3b" text-anchor="middle" font-weight="700">ISO</text>
+  <text x="110" y="128" font-family="Georgia, serif" font-size="33" fill="#15191f" text-anchor="middle" font-weight="700" letter-spacing="1">14001</text>
+  <text x="110" y="150" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#9a6e3b" text-anchor="middle">2015</text>
+</svg>

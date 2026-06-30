@@ -75,6 +75,12 @@ export function FooterLight({
             © {company.copyrightYear} {company.legalName}. {footer.rights}
           </p>
           <nav className="flex items-center gap-5">
+            <Link
+              className="transition-colors hover:text-ink"
+              href={locale === "it" ? "/light/certificazioni" : "/en/light/certifications"}
+            >
+              {locale === "it" ? "Certificazioni" : "Certifications"}
+            </Link>
             <Link className="transition-colors hover:text-ink" href={routes.privacy[locale]}>
               {legal.privacy}
             </Link>

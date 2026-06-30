@@ -43,15 +43,19 @@ export function NavLight({
   content,
   otherHref,
   homeHref,
+  anchorBase = "",
 }: {
   locale: Locale;
   content: Content;
   otherHref: string;
   homeHref: string;
+  /** Prefisso per le ancore: "" sulla home, homeHref su pagine separate (es. Certificazioni). */
+  anchorBase?: string;
 }) {
   const [open, setOpen] = useState(false);
   const { nav, langToggle } = content;
-  const items = nav.items.map((i) => ({ name: i.label, link: `#${anchors[i.anchor]}` }));
+  const items = nav.items.map((i) => ({ name: i.label, link: `${anchorBase}#${anchors[i.anchor]}` }));
+  const contactHref = `${anchorBase}#${anchors.contact}`;
 
   const langLink = (
     <Link
@@ -73,11 +77,11 @@ export function NavLight({
         <NavItems items={items} />
         <div className="relative z-20 flex items-center gap-2.5">
           <span className="hidden xl:block">{langLink}</span>
-          <a href={`#${anchors.contact}`} className={cn(inkButtonClass, "px-5 py-2.5 text-[0.82rem]")}>
+          <a href={contactHref} className={cn(inkButtonClass, "px-5 py-2.5 text-[0.82rem]")}>
             {nav.quote}
           </a>
           <a
-            href={`#${anchors.contact}`}
+            href={contactHref}
             aria-hidden
             tabIndex={-1}
             className="flex size-10 items-center justify-center rounded-full bg-ink text-paper transition-transform duration-200 hover:scale-105"
@@ -102,7 +106,7 @@ export function NavLight({
             {nav.items.map((i) => (
               <a
                 key={i.anchor}
-                href={`#${anchors[i.anchor]}`}
+                href={`${anchorBase}#${anchors[i.anchor]}`}
                 onClick={() => setOpen(false)}
                 className="py-3.5 font-grotesk text-xl font-bold tracking-[-0.02em] text-ink"
               >
@@ -112,7 +116,7 @@ export function NavLight({
           </nav>
           <div className="mt-4 flex w-full items-center gap-3">
             <a
-              href={`#${anchors.contact}`}
+              href={contactHref}
               onClick={() => setOpen(false)}
               className={cn(inkButtonClass, "flex-1")}
             >
