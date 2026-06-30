@@ -77,6 +77,11 @@ export function NetworkMap({ className }: { className?: string }) {
           <stop offset="45%" stopColor="#c99a4e" stopOpacity="0.28" />
           <stop offset="100%" stopColor="#c99a4e" stopOpacity="0" />
         </radialGradient>
+        {/* Tinge l'icona (silhouette nera con alpha) del colore oro */}
+        <filter id="fortun-tint-gold" x="0" y="0" width="100%" height="100%">
+          <feFlood floodColor={GOLD} result="c" />
+          <feComposite in="c" in2="SourceGraphic" operator="in" />
+        </filter>
       </defs>
 
       <image href="/bg/world-night.webp" x="0" y="0" width={VB_W} height={VB_H} preserveAspectRatio="xMidYMid slice" />
@@ -137,19 +142,16 @@ export function NetworkMap({ className }: { className?: string }) {
                 <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
               )}
             </circle>
-            <g
-              transform={`translate(${c.x} ${c.y})`}
-              fill="none"
-              stroke={GOLD}
-              strokeWidth={1.1}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              {/* gambe + sommità + base + traverse + asta */}
-              <path d="M-5 8 L-1.8 -6 M5 8 L1.8 -6 M-1.8 -6 L1.8 -6 M-6 8 L6 8" />
-              <path d="M-4 3 L4 3 M-3 -1.5 L3 -1.5" strokeOpacity={0.75} />
-              <path d="M0 -6 L0 -9.5" />
-            </g>
+            {/* Icona pompa di petrolio (pump jack), tinta in oro */}
+            <image
+              href="/bg/light/map/pump.webp"
+              x={c.x - 9}
+              y={c.y - 8.6}
+              width={18}
+              height={17.25}
+              filter="url(#fortun-tint-gold)"
+              preserveAspectRatio="xMidYMid meet"
+            />
             <text
               x={l.x}
               y={l.y}

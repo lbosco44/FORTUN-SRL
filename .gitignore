@@ -65,3 +65,7 @@ next-env.d.ts
 /public/QC.png
 /public/Stoccaggio.png
 /public/Trasporto.png
+
+# icone sorgente icons8 (uso la versione webp derivata in bg/light/map/)
+/public/icons8-pompa-di-petrolio-96.png
+/public/icons8-casa-50.png
