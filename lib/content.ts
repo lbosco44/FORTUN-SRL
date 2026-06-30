@@ -126,7 +126,7 @@ const it: Content = {
     eyebrow: "Chi siamo",
     headLead: "Una società di trading italiana, con una rete di fornitori e controparti",
     headAccent: "mondiale.",
-    body: "Fortun SRL è una società italiana con sede a Roma. Operiamo nel trading di prodotti petroliferi e sottoprodotti petroliferi: non estraiamo e non raffiniamo, muoviamo prodotto già a specifica dai mercati dove viene immesso a quelli dove serve. Il nostro lavoro è sapere dove c'è disponibilità, dove c'è domanda, e gestire con rigore tutto ciò che sta in mezzo.",
+    body: "Fortun SRL è una società italiana con sede a Roma, con uno staff tecnico con esperienza trentennale. Operiamo nel trading di prodotti petroliferi e sottoprodotti petroliferi: non estraiamo e non raffiniamo, muoviamo prodotto già a specifica dai mercati dove viene immesso a quelli dove serve. Il nostro lavoro è sapere dove c'è disponibilità, dove c'è domanda, e gestire con rigore tutto ciò che sta in mezzo.",
     features: [
       { title: "Affidabilità e trasparenza", desc: "Termini chiari prima di impegnarci, e ciò che concordiamo su specifica, volumi e tempi viene rispettato." },
       { title: "Accesso globale", desc: "Una rete di fornitori e controparti che ci dà accesso ai principali snodi dei prodotti petroliferi e sottoprodotti petroliferi." },
@@ -204,9 +204,9 @@ const it: Content = {
     eyebrow: "Perché Fortun",
     headLead: "Compliance &",
     headAccent: "Affidabilità.",
-    body: "Operiamo secondo gli standard internazionali di compliance e trasparenza, con processi rigorosi e controlli costanti. L'affidabilità delle controparti è la nostra priorità.",
+    body: "Operiamo secondo gli standard internazionali di compliance, trasparenza e antiriciclaggio (AML), con processi rigorosi e controlli costanti. L'affidabilità delle controparti è la nostra priorità.",
     cards: [
-      { title: "Controparti qualificate", desc: "Verifica e selezione delle controparti, con procedure KYC e due diligence." },
+      { title: "Controparti qualificate", desc: "Verifichiamo e selezioniamo le controparti con procedure KYC e AML — la normativa antiriciclaggio (Anti-Money Laundering) — accertando identità, titolarità effettiva e provenienza dei fondi, per prevenire il riciclaggio e il finanziamento di attività illecite." },
       { title: "Documentazione e compliance", desc: "Operazioni documentate secondo la normativa internazionale lungo l'intera catena." },
       { title: "Controllo qualità prodotto", desc: "Specifiche verificate e controllate con ispezioni indipendenti dove necessario." },
       { title: "Market intelligence & risk", desc: "Monitoraggio dei mercati e gestione del rischio prezzo a tutela delle operazioni." },
@@ -308,7 +308,7 @@ const en: Content = {
     eyebrow: "About us",
     headLead: "An Italian trading company, with a network of suppliers and counterparties",
     headAccent: "worldwide.",
-    body: "Fortun SRL is an Italian company based in Rome. We trade petroleum products and by-products: we do not extract and do not refine — we move product that is already on-spec, from the markets where it enters circulation to the markets where it is needed. Our work is knowing where supply sits, where demand sits, and handling everything in between with rigour.",
+    body: "Fortun SRL is an Italian company based in Rome, with a technical staff bringing thirty years of experience. We trade petroleum products and by-products: we do not extract and do not refine — we move product that is already on-spec, from the markets where it enters circulation to the markets where it is needed. Our work is knowing where supply sits, where demand sits, and handling everything in between with rigour.",
     features: [
       { title: "Reliability and transparency", desc: "Clear terms before we commit, and what we agree on specification, volumes and timing is honoured." },
       { title: "Global access", desc: "A network of suppliers and counterparties that gives us access to the main petroleum-product and by-product hubs." },
@@ -386,9 +386,9 @@ const en: Content = {
     eyebrow: "Why Fortun",
     headLead: "Compliance &",
     headAccent: "Reliability.",
-    body: "We operate to international compliance and transparency standards, with rigorous processes and constant controls. Counterparty reliability is our priority.",
+    body: "We operate to international compliance, transparency and anti-money laundering (AML) standards, with rigorous processes and constant controls. Counterparty reliability is our priority.",
     cards: [
-      { title: "Qualified counterparties", desc: "Vetting and selection of counterparties, with KYC and due diligence procedures." },
+      { title: "Qualified counterparties", desc: "We vet and select counterparties with KYC and AML procedures — Anti-Money Laundering regulation — verifying identity, beneficial ownership and source of funds, to prevent money laundering and the financing of illicit activities." },
       { title: "Documentation & compliance", desc: "Operations documented per international regulation along the full chain." },
       { title: "Product quality control", desc: "Specifications verified and checked with independent inspections where needed." },
       { title: "Market intelligence & risk", desc: "Market monitoring and price-risk management to protect operations." },
