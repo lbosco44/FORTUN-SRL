@@ -71,7 +71,7 @@ export function CertsPage({ locale }: { locale: Locale }) {
                       href={pdfHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group block overflow-hidden rounded-lg border border-ink/10 bg-white shadow-sm"
+                      className="group mx-auto block w-fit overflow-hidden rounded-lg border border-ink/10 bg-white shadow-sm"
                       aria-label={`${d.view} — ISO ${c.num}:${c.year}`}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -79,7 +79,7 @@ export function CertsPage({ locale }: { locale: Locale }) {
                         src={previewHref}
                         alt={`Certificato ISO ${c.num}:${c.year} — ${c.title}`}
                         loading="lazy"
-                        className="w-full transition-transform duration-500 group-hover:scale-[1.015]"
+                        className="max-h-[20rem] w-auto transition-transform duration-500 group-hover:scale-[1.015] lg:max-h-[22rem]"
                       />
                     </a>
 
