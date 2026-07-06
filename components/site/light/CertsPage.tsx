@@ -8,8 +8,8 @@ import { getContent } from "@/lib/content";
 import { type Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
-const lightHome = { it: "/light", en: "/en/light" } as const;
-const certsHref = { it: "/light/certificazioni", en: "/en/light/certifications" } as const;
+const lightHome = { it: "/", en: "/en" } as const;
+const certsHref = { it: "/certificazioni", en: "/en/certifications" } as const;
 
 // pdf = base del certificato in /certs → poi -it/-en.pdf (documento) e /certs/preview/…-it/-en.jpg (anteprima 1ª pagina)
 type Cert = { num: string; year: string; pdf?: string; title: string; desc: string; status: "active" | "upcoming" };

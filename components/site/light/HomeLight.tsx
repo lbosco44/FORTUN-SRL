@@ -4,18 +4,18 @@ import { NavLight } from "@/components/site/light/NavLight";
 import { FooterLight } from "@/components/site/light/FooterLight";
 import {
   HeroLight, AboutLight, NetworkLight, ProcessLight, ManifestoLight,
-  SolutionsLight, ComplianceLight, ContactLight,
+  SolutionsLight, ComplianceLight, CertificationsLight, ContactLight,
 } from "@/components/site/light/Sections";
 import { getContent } from "@/lib/content";
 import { type Locale } from "@/lib/i18n";
 
-// La variante /light vive su /light (it) e /en/light (en).
-const lightHome = { it: "/light", en: "/en/light" } as const;
+// Home del sito: / (it) e /en (en).
+const home = { it: "/", en: "/en" } as const;
 
 export function HomeLightPage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
-  const homeHref = lightHome[locale];
-  const otherHref = lightHome[locale === "it" ? "en" : "it"];
+  const homeHref = home[locale];
+  const otherHref = home[locale === "it" ? "en" : "it"];
 
   return (
     <div className="light-root font-grotesk min-h-dvh bg-paper text-ink">
@@ -29,6 +29,7 @@ export function HomeLightPage({ locale }: { locale: Locale }) {
         <ManifestoLight content={content} />
         <SolutionsLight content={content} />
         <ComplianceLight content={content} />
+        <CertificationsLight content={content} locale={locale} />
         <ContactLight locale={locale} content={content} />
       </main>
       <FooterLight locale={locale} content={content} otherHref={otherHref} homeHref={homeHref} />

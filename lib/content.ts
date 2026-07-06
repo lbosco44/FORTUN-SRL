@@ -62,6 +62,7 @@ export interface Content {
     cards: { title: string; desc: string }[];
     note: string;
   };
+  certifications: { headLead: string; headAccent: string; body: string; cta: string };
   contact: {
     eyebrow: string;
     headLead: string;
@@ -212,6 +213,12 @@ const it: Content = {
       { title: "Market intelligence & risk", desc: "Monitoraggio dei mercati e gestione del rischio prezzo a tutela delle operazioni." },
     ],
     note: "Integrità, competenza e responsabilità: i valori che guidano ogni nostra decisione.",
+  },
+  certifications: {
+    headLead: "Qualità e sicurezza",
+    headAccent: "certificate.",
+    body: "Operiamo secondo standard internazionali certificati: ISO 9001:2015 per la gestione della qualità e ISO 27001:2022 per la sicurezza delle informazioni.",
+    cta: "Vedi le certificazioni",
   },
   contact: {
     eyebrow: "Parliamo di forniture",
@@ -394,6 +401,12 @@ const en: Content = {
       { title: "Market intelligence & risk", desc: "Market monitoring and price-risk management to protect operations." },
     ],
     note: "Integrity, competence and responsibility: the values that guide every decision we make.",
+  },
+  certifications: {
+    headLead: "Certified quality",
+    headAccent: "and security.",
+    body: "We operate to certified international standards: ISO 9001:2015 for quality management and ISO 27001:2022 for information security.",
+    cta: "See the certifications",
   },
   contact: {
     eyebrow: "Let's talk supply",

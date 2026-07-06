@@ -371,6 +371,50 @@ export function ComplianceLight({ content }: { content: Content }) {
   );
 }
 
+/* ───────────────────────── 7b — CERTIFICAZIONI (CTA verso la pagina dedicata) ───────────────────────── */
+export function CertificationsLight({ content, locale }: { content: Content; locale: Locale }) {
+  const cc = content.certifications;
+  const href = locale === "it" ? "/certificazioni" : "/en/certifications";
+  return (
+    <section className="section-y bg-paper">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="flex flex-col gap-10 rounded-2xl border border-ink/10 bg-sand/50 p-8 lg:flex-row lg:items-center lg:justify-between lg:gap-14 lg:p-12">
+          <div className="max-w-xl">
+            <Reveal>
+              <Display lead={cc.headLead} accent={cc.headAccent} className="text-[clamp(1.9rem,3.6vw,2.8rem)]" />
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-5 text-base leading-relaxed text-ink-soft">{cc.body}</p>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <a href={href} className={cn(inkButtonClass, "mt-7")}>
+                <Dot />
+                {cc.cta}
+              </a>
+            </Reveal>
+          </div>
+          <Reveal delay={0.12} className="flex shrink-0 justify-center gap-5 lg:justify-end">
+            {["iso-9001", "iso-27001"].map((c, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={c}
+                src={`/certs/preview/${c}-${locale}.jpg`}
+                alt=""
+                aria-hidden
+                loading="lazy"
+                className={cn(
+                  "h-44 w-auto rounded-lg border border-ink/10 bg-white shadow-md lg:h-56",
+                  i === 0 ? "-rotate-3" : "rotate-3"
+                )}
+              />
+            ))}
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ───────────────────────── 8 — CONTATTI (card scura) ───────────────────────── */
 export function ContactLight({ locale, content }: { locale: Locale; content: Content }) {
   const { contact } = content;
