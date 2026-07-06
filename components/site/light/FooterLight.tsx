@@ -77,7 +77,7 @@ export function FooterLight({
           <nav className="flex items-center gap-5">
             <Link
               className="transition-colors hover:text-ink"
-              href={locale === "it" ? "/certificazioni" : "/en/certifications"}
+              href={locale === "it" ? "/it/certificazioni" : "/certifications"}
             >
               {locale === "it" ? "Certificazioni" : "Certifications"}
             </Link>

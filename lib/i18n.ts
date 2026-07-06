@@ -1,13 +1,14 @@
 export type Locale = "it" | "en";
 export const locales: Locale[] = ["it", "en"];
-export const defaultLocale: Locale = "it";
+// Lingua di default del sito = inglese (root senza prefisso). Italiano sotto /it.
+export const defaultLocale: Locale = "en";
 
 /** Mappa pagina -> path per ciascuna lingua. Single source per nav, toggle e hreflang. */
 export const routes = {
-  home: { it: "/", en: "/en" },
-  privacy: { it: "/privacy", en: "/en/privacy" },
-  cookie: { it: "/cookie", en: "/en/cookie-policy" },
-  thankYou: { it: "/grazie", en: "/en/thank-you" },
+  home: { it: "/it", en: "/" },
+  privacy: { it: "/it/privacy", en: "/privacy" },
+  cookie: { it: "/it/cookie", en: "/cookie-policy" },
+  thankYou: { it: "/it/grazie", en: "/thank-you" },
 } as const;
 
 export type RouteKey = keyof typeof routes;

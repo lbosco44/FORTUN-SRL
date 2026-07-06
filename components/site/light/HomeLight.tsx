@@ -9,8 +9,8 @@ import {
 import { getContent } from "@/lib/content";
 import { type Locale } from "@/lib/i18n";
 
-// Home del sito: / (it) e /en (en).
-const home = { it: "/", en: "/en" } as const;
+// Home del sito: / (en, default) e /it (it).
+const home = { it: "/it", en: "/" } as const;
 
 export function HomeLightPage({ locale }: { locale: Locale }) {
   const content = getContent(locale);

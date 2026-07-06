@@ -374,7 +374,7 @@ export function ComplianceLight({ content }: { content: Content }) {
 /* ───────────────────────── 7b — CERTIFICAZIONI (CTA verso la pagina dedicata) ───────────────────────── */
 export function CertificationsLight({ content, locale }: { content: Content; locale: Locale }) {
   const cc = content.certifications;
-  const href = locale === "it" ? "/certificazioni" : "/en/certifications";
+  const href = locale === "it" ? "/it/certificazioni" : "/certifications";
   return (
     <section className="section-y bg-paper">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
