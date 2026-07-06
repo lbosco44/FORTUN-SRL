@@ -24,7 +24,7 @@ export function HeroLight({ content }: { content: Content }) {
           {/* Immagine grande arrotondata */}
           <Image
             src="/bg/light/hero-open.webp"
-            alt="Petroliera carica di prodotti petroliferi in navigazione in mare aperto"
+            alt={hero.imageAlt}
             width={1400}
             height={787}
             priority
@@ -67,9 +67,9 @@ export function AboutLight({ content }: { content: Content }) {
         {/* Banner corto gigante (stile "Because Access Matters") */}
         <Reveal>
           <h2 className="display-tight mx-auto max-w-5xl text-center text-ink text-[clamp(2.75rem,8vw,7rem)]">
-            {"Perché l'"}
-            <span className="mark-gold">affidabilità</span>
-            {" conta."}
+            {about.bannerLead}
+            <span className="mark-gold">{about.bannerAccent}</span>
+            {about.bannerTail}
           </h2>
         </Reveal>
 
@@ -80,7 +80,7 @@ export function AboutLight({ content }: { content: Content }) {
             <figure className="overflow-hidden rounded-2xl">
               <Image
                 src="/bg/light/about.webp"
-                alt="Complesso di raffineria al crepuscolo"
+                alt={about.imageAlt}
                 width={1200}
                 height={798}
                 sizes="(max-width: 1024px) 100vw, 460px"
