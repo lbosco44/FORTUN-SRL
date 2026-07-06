@@ -132,7 +132,7 @@ export function NetworkLight({ content }: { content: Content }) {
     <section id={anchors.network} className="section-y relative isolate overflow-hidden bg-abyss text-paper">
       <Reveal delay={0.05}>
         <div className="relative w-full overflow-hidden">
-          <NetworkMap className="block aspect-[1000/478] w-full sm:aspect-auto sm:h-[56vw] sm:max-h-[51.25rem] sm:min-h-[27.5rem]" />
+          <NetworkMap className="block aspect-[1000/478] w-full sm:aspect-auto sm:h-[56vw] sm:max-h-[51.25rem] sm:min-h-[27.5rem]" ariaLabel={network.mapAria} />
           <div className="pointer-events-none absolute inset-x-0 top-0 h-14 bg-gradient-to-b from-abyss to-transparent sm:h-28" aria-hidden />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-abyss to-transparent sm:h-32" aria-hidden />
           <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-abyss to-transparent sm:w-28" aria-hidden />

@@ -58,7 +58,7 @@ function label(n: Node) {
   return { x: n.x - h, y: n.y + 3, anchor: "end" as const };
 }
 
-export function NetworkMap({ className }: { className?: string }) {
+export function NetworkMap({ className, ariaLabel }: { className?: string; ariaLabel?: string }) {
   const reduce = useReducedMotion();
   const hubs = NODES.filter((n) => n.kind === "hub");
   const sedi = NODES.filter((n) => n.kind === "sede");
@@ -69,7 +69,7 @@ export function NetworkMap({ className }: { className?: string }) {
       preserveAspectRatio="xMidYMid slice"
       className={className}
       role="img"
-      aria-label="Rete operativa Fortun: hub di Rotterdam, Houston, Fujairah, Durazzo e Mersin; sedi a Roma, Siracusa, Dubai e Tirana, sulla mappa mondiale."
+      aria-label={ariaLabel ?? "Rete operativa Fortun: hub di Rotterdam, Houston, Fujairah, Durazzo e Mersin; sedi a Roma, Siracusa, Dubai e Tirana, sulla mappa mondiale."}
     >
       <defs>
         <radialGradient id="fortun-hub-glow" cx="50%" cy="50%" r="50%">

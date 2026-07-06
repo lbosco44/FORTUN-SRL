@@ -168,13 +168,21 @@ export const MobileNavMenu = ({ children, className, isOpen }: MobileNavMenuProp
   </AnimatePresence>
 );
 
-export const MobileNavToggle = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void }) => (
+export const MobileNavToggle = ({
+  isOpen,
+  onClick,
+  label = { open: "Apri menu", close: "Chiudi menu" },
+}: {
+  isOpen: boolean;
+  onClick: () => void;
+  label?: { open: string; close: string };
+}) => (
   <button
     type="button"
     onClick={onClick}
     className="text-ink"
     aria-expanded={isOpen}
-    aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
+    aria-label={isOpen ? label.close : label.open}
   >
     {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
   </button>

@@ -98,7 +98,11 @@ export function NavLight({
             <Logo homeHref={homeHref} onClick={() => setOpen(false)} />
           </span>
           <span className="ml-auto">
-            <MobileNavToggle isOpen={open} onClick={() => setOpen((v) => !v)} />
+            <MobileNavToggle
+              isOpen={open}
+              onClick={() => setOpen((v) => !v)}
+              label={{ open: nav.menuOpen, close: nav.menuClose }}
+            />
           </span>
         </MobileNavHeader>
         <MobileNavMenu isOpen={open} onClose={() => setOpen(false)}>

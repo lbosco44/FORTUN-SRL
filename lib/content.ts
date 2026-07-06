@@ -6,7 +6,7 @@ type AnchorKey = keyof typeof anchors;
 export interface Content {
   meta: { title: string; description: string };
   skip: string;
-  nav: { items: { label: string; anchor: AnchorKey }[]; quote: string };
+  nav: { items: { label: string; anchor: AnchorKey }[]; quote: string; menuOpen: string; menuClose: string };
   hero: {
     eyebrow: string;
     headLead: string;
@@ -40,6 +40,7 @@ export interface Content {
     legend: string[];
     mapHubs: string;
     mapSedi: string;
+    mapAria: string;
   };
   process: {
     eyebrow: string;
@@ -118,6 +119,8 @@ const it: Content = {
       { label: "Contatti", anchor: "contact" },
     ],
     quote: "Richiedi una quotazione",
+    menuOpen: "Apri menu",
+    menuClose: "Chiudi menu",
   },
   hero: {
     eyebrow: "Trading house · Oil & Gas · Roma",
@@ -170,6 +173,7 @@ const it: Content = {
     legend: ["Hub logistici", "Terminal & Port", "Rotte commerciali"],
     mapHubs: "Hub operativi",
     mapSedi: "Sedi",
+    mapAria: "Rete operativa Fortun: hub di Rotterdam, Houston, Fujairah, Durazzo e Mersin; sedi a Roma, Siracusa, Dubai e Tirana, sulla mappa mondiale.",
   },
   process: {
     eyebrow: "Come operiamo",
@@ -311,6 +315,8 @@ const en: Content = {
       { label: "Contact", anchor: "contact" },
     ],
     quote: "Request a quote",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
   },
   hero: {
     eyebrow: "Trading house · Oil & Gas · Rome",
@@ -363,6 +369,7 @@ const en: Content = {
     legend: ["Logistics hubs", "Terminal & Port", "Trade routes"],
     mapHubs: "Operating hubs",
     mapSedi: "Offices",
+    mapAria: "Fortun operational network: hubs in Rotterdam, Houston, Fujairah, Durrës and Mersin; offices in Rome, Siracusa, Dubai and Tirana, on the world map.",
   },
   process: {
     eyebrow: "How we operate",
