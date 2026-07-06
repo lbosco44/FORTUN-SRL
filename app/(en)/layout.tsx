@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: { default: "Fortun SRL — Petroleum products and by-products trading", template: "%s" },
   applicationName: company.legalName,
   openGraph: { siteName: company.legalName },
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }, { url: "/favicon.ico", sizes: "any" }],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function EnRootLayout({ children }: { children: React.ReactNode }) {
