@@ -69,3 +69,5 @@ next-env.d.ts
 # icone sorgente icons8 (uso la versione webp derivata in bg/light/map/)
 /public/icons8-pompa-di-petrolio-96.png
 /public/icons8-casa-50.png
+.claude/settings.local.json
+.claude/launch.json
