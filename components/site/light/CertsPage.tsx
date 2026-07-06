@@ -11,32 +11,32 @@ import { cn } from "@/lib/utils";
 const lightHome = { it: "/light", en: "/en/light" } as const;
 const certsHref = { it: "/light/certificazioni", en: "/en/light/certifications" } as const;
 
-// slug = badge SVG in /bg/light/certs · pdf = base del certificato in /certs (poi -it/-en.pdf)
-type Cert = { num: string; year: string; slug: string; pdf: string; title: string; desc: string };
+// pdf = base del certificato in /certs → poi -it/-en.pdf (documento) e /certs/preview/…-it/-en.jpg (anteprima 1ª pagina)
+type Cert = { num: string; year: string; pdf: string; title: string; desc: string };
 
 const DATA: Record<Locale, { headLead: string; headAccent: string; intro: string; view: string; note: string; certs: Cert[] }> = {
   it: {
     headLead: "Standard e",
     headAccent: "certificazioni.",
     intro:
-      "Operiamo nel rispetto dei principali standard internazionali di gestione. Le nostre certificazioni sono disponibili qui in formato PDF, in versione italiana e inglese.",
-    view: "Visualizza il certificato (PDF)",
-    note: "Certificati ufficiali rilasciati a Fortun S.r.l.",
+      "Operiamo nel rispetto dei principali standard internazionali di gestione. Di seguito i certificati ufficiali di Fortun S.r.l., consultabili e scaricabili in formato PDF.",
+    view: "Visualizza (PDF)",
+    note: "Certificati ufficiali rilasciati a Fortun S.r.l. — disponibili in versione italiana e inglese.",
     certs: [
-      { num: "9001", year: "2015", slug: "iso-9001", pdf: "iso-9001", title: "Gestione della qualità", desc: "Sistema di gestione per la qualità di processi e servizi." },
-      { num: "27001", year: "2022", slug: "iso-27001", pdf: "iso-27001", title: "Sicurezza delle informazioni", desc: "Protezione dei dati e dei sistemi informativi." },
+      { num: "9001", year: "2015", pdf: "iso-9001", title: "Gestione della qualità", desc: "Sistema di gestione per la qualità di processi e servizi." },
+      { num: "27001", year: "2022", pdf: "iso-27001", title: "Sicurezza delle informazioni", desc: "Protezione dei dati e dei sistemi informativi." },
     ],
   },
   en: {
     headLead: "Standards and",
     headAccent: "certifications.",
     intro:
-      "We operate in line with the main international management standards. Our certifications are available here as PDF, in Italian and English versions.",
-    view: "View the certificate (PDF)",
-    note: "Official certificates issued to Fortun S.r.l.",
+      "We operate in line with the main international management standards. Below are Fortun S.r.l.'s official certificates, viewable and downloadable as PDF.",
+    view: "View (PDF)",
+    note: "Official certificates issued to Fortun S.r.l. — available in Italian and English.",
     certs: [
-      { num: "9001", year: "2015", slug: "iso-9001", pdf: "iso-9001", title: "Quality management", desc: "Management system for the quality of processes and services." },
-      { num: "27001", year: "2022", slug: "iso-27001", pdf: "iso-27001", title: "Information security", desc: "Protection of data and information systems." },
+      { num: "9001", year: "2015", pdf: "iso-9001", title: "Quality management", desc: "Management system for the quality of processes and services." },
+      { num: "27001", year: "2022", pdf: "iso-27001", title: "Information security", desc: "Protection of data and information systems." },
     ],
   },
 };
@@ -59,35 +59,52 @@ export function CertsPage({ locale }: { locale: Locale }) {
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-soft">{d.intro}</p>
           </Reveal>
 
-          <div className="mt-14 grid max-w-4xl gap-6 sm:grid-cols-2">
-            {d.certs.map((c, i) => (
-              <Reveal key={c.slug} delay={i * 0.08}>
-                <article className="flex h-full flex-col items-center rounded-2xl border border-ink/10 bg-white/60 p-8 text-center transition-colors duration-300 hover:border-gold-deep/40 hover:bg-white/85">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`/bg/light/certs/${c.slug}.svg`}
-                    alt={`Certificazione ISO ${c.num}:${c.year} — ${c.title}`}
-                    width={132}
-                    height={132}
-                    className="h-32 w-32"
-                  />
-                  <h2 className="mt-6 font-grotesk text-2xl font-bold tracking-[-0.02em] text-ink">
-                    ISO {c.num}:{c.year}
-                  </h2>
-                  <p className="readout mt-1.5 text-gold-deep">{c.title}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-ink-soft">{c.desc}</p>
-                  <a
-                    href={`/certs/${c.pdf}-${locale}.pdf`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(inkButtonClass, "mt-7 px-6 py-3 text-[0.85rem]")}
-                  >
-                    <FileText className="size-4" strokeWidth={2} aria-hidden />
-                    {d.view}
-                  </a>
-                </article>
-              </Reveal>
-            ))}
+          <div className="mt-14 grid max-w-4xl gap-8 sm:grid-cols-2">
+            {d.certs.map((c, i) => {
+              const pdfHref = `/certs/${c.pdf}-${locale}.pdf`;
+              const previewHref = `/certs/preview/${c.pdf}-${locale}.jpg`;
+              return (
+                <Reveal key={c.pdf} delay={i * 0.08}>
+                  <article className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white/60 p-4 transition-colors duration-300 hover:border-gold-deep/40 sm:p-5">
+                    {/* Anteprima reale della 1ª pagina del certificato (cliccabile → PDF intero) */}
+                    <a
+                      href={pdfHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block overflow-hidden rounded-lg border border-ink/10 bg-white shadow-sm"
+                      aria-label={`${d.view} — ISO ${c.num}:${c.year}`}
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={previewHref}
+                        alt={`Certificato ISO ${c.num}:${c.year} — ${c.title}`}
+                        loading="lazy"
+                        className="w-full transition-transform duration-500 group-hover:scale-[1.015]"
+                      />
+                    </a>
+
+                    <div className="mt-5 flex items-end justify-between gap-4">
+                      <div>
+                        <h2 className="font-grotesk text-lg font-bold tracking-[-0.02em] text-ink">
+                          ISO {c.num}:{c.year}
+                        </h2>
+                        <p className="readout mt-1 text-gold-deep">{c.title}</p>
+                        <p className="mt-2 max-w-xs text-sm leading-relaxed text-ink-soft">{c.desc}</p>
+                      </div>
+                      <a
+                        href={pdfHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={cn(inkButtonClass, "shrink-0 px-5 py-2.5 text-[0.8rem]")}
+                      >
+                        <FileText className="size-4" strokeWidth={2} aria-hidden />
+                        {d.view}
+                      </a>
+                    </div>
+                  </article>
+                </Reveal>
+              );
+            })}
           </div>
 
           <p className="mt-12 max-w-2xl text-xs leading-relaxed text-ink-soft/70">{d.note}</p>
